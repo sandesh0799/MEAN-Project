@@ -1,1 +1,13 @@
-<p>product-item works!</p>
+<mat-grid-list cols="4" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let product of products">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{product.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{product.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
