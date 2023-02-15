@@ -53,16 +53,11 @@ const materialModules = [
   MatButtonToggleModule,
   MatTreeModule,
   PortalModule,
-  MatGridListModule
+  MatGridListModule,
 ];
 
 @NgModule({
-  imports: [
-    ...materialModules
-  ],
-  exports: [
-    ...materialModules
-  ],
+  imports: [...materialModules],
+  exports: [...materialModules],
 })
-export class MaterialModule {
-}
+export class MaterialModule {}
