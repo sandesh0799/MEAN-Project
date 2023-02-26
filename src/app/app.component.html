@@ -5,26 +5,19 @@
         </button>
         <h1>Product Mart</h1>
         <span class="menu-spacer"></span>
-        <div class="example-button-row">
-            <button mat-button [routerLink]="'/home'" routerLinkActive="active-link">
-                Home
-            </button>
-            <button mat-button [routerLink]="'/products'" routerLinkActive="active-link">
-                Product
-            </button>
-        </div>
+        <div class="example-button-row"></div>
         <span class="example-spacer"></span>
-        <button mat-icon-button class="example-icon cart-icon" aria-label="Example icon-button with cart icon">
-            <mat-icon>shopping_cart</mat-icon>
+        <button mat-button mat-raised-button [routerLink]="'/login'" routerLinkActive="active-link">
+            Login
         </button>
     </mat-toolbar-row>
 </mat-toolbar>
 
 <mat-sidenav-container>
-    <mat-sidenav #sidenav>
+    <mat-sidenav #sidenav style="width: 200px;">
         <mat-nav-list>
-            <a mat-list-item [routerLink]="'/home'"> Home </a>
-            <a mat-list-item [routerLink]="'/products'"> Product </a>
+            <a mat-list-item [routerLink]="'/home'" routerLinkActive="active-link"> Home </a>
+            <a mat-list-item [routerLink]="'/products'" routerLinkActive="active-link"> Product </a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -32,4 +25,4 @@
             <router-outlet></router-outlet>
         </div>
     </mat-sidenav-content>
-</mat-sidenav-container>F
+</mat-sidenav-container>

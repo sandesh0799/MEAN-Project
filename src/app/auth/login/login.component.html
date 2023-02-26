@@ -1,0 +1,27 @@
+<div class="login-container">
+    <mat-card class="example-card login-card">
+        <mat-card-title class="text-center">Login</mat-card-title>
+        <div class="text-center">
+            <img style="border:1px solid #ddd;border-radius: 50%;padding: 2px; margin-bottom: 10px;" src="../../../assets/icons8-user-90.png"/>
+        </div>
+        <mat-card-content class="flex">
+            <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+                <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="email">
+                    <mat-error *ngIf="errorHandling('email', 'required')">
+                        You must provide a <strong>Email</strong>
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Password" formControlName="password">
+                    <mat-error *ngIf="errorHandling('password', 'required')">
+                        You must provide a <strong>Password</strong>
+                    </mat-error>
+                </mat-form-field>
+                <div class="text-center m-3">
+                    <button mat-raised-button color="primary" type="submit">Login</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
